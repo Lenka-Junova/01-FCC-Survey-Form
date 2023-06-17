@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Traffic Fines</h1>
+      <p id="description">
+        This simple survey is aimed at collecting data about what type of people
+        gets more traffic fines. Your personal data will not be published, all
+        results will be aggregated in general categories. Filling ourt should
+        not take more than 5 minutes of your time. Thank you for your
+        cooperation.
+      </p>
+      <form id="survey-form" action="www.example.com" method="post">
+        <fieldset>
+          <label id="name-label" for="name">
+            Your name:
+            <input
+              id="name"
+              type="text"
+              name="person-name"
+              required
+              placeholder="i.e.: John Doe"
+          /></label>
+          <label id="email-label" for="email"
+            >Your e-mail address:
+            <input
+              id="email"
+              type="email"
+              name="person-email"
+              required
+              placeholder="i.e.: johndoe@email.com"
+          /></label>
+          <label id="number-label" for="number"
+            >Your age:
+            <input
+              id="number"
+              type="number"
+              name="person-age"
+              min="18"
+              max="100"
+              required
+              placeholder="i.e.:25"
+          /></label>
+        </fieldset>
+        <fieldset>
+          <label
+            >How often do you drive a car per month?<select id="dropdown">
+              <option value="1" name="option1">Daily</option>
+              <option value="2" name="option2">Every other day</option>
+              <option value="3" name="option3">Rarely</option>
+            </select></label
+          >
+          <p>Have you ever received a traffic fine?</p>
+          <label for="traffic-fine"
+            ><input
+              type="radio"
+              name="fine"
+              id="traffic-fine"
+              class="radioButtons"
+              value="Yes"
+            />Yes</label
+          >
+          <label for="traffic-fine"
+            ><input
+              type="radio"
+              name="fine"
+              id="traffic-fine"
+              class="radioButtons"
+              value="No"
+            />No</label
+          >
+          <p>What kind of offence have you get traffic fine for?</p>
+          <label><input type="checkbox" value="speed" />Speeding</label>
+          <label
+            ><input type="checkbox" value="texting" />Texting when
+            driving</label
+          >
+          <label><input type="checkbox" value="influence" />DUI</label>
+          <label
+            ><input type="checkbox" value="accident" />Causing traffic
+            accident</label
+          >
+          <label
+            ><input type="checkbox" value="technical" />The car was not
+            compliant with technical requirements</label
+          >
+          <label
+            ><input type="checkbox" value="red" />Driving on red light</label
+          >
+          <label
+            ><input type="checkbox" value="safety" />Not using safety belt/child
+            safety seat</label
+          >
+          <label
+            ><input type="checkbox" value="license" />Driving without driver's
+            licence</label
+          >
+          <label
+            ><input type="checkbox" value="reckless" />Reckless driving</label
+          >
+          <label><input type="checkbox" value="other" />Other reason</label>
+        </fieldset>
+        <fieldset>
+          <textarea
+            id="questions"
+            placeholder="Do you have any questions or remarks?"
+            name="person-questions"
+            rows="3"
+            cols="6"
+          ></textarea>
+          <label
+            ><input type="checkbox" name="terms" value="GDPR" required />I agree
+            with submitting above mentioned data in accordance with GDPR.</label
+          >
+          <input type="submit" name="Submit" id="submit" />
+          <p>
+            We will send the results to the e-mail address that you have kindly
+            provided.
+          </p>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>
+        Survey performed by XY, further information at
+        <a href="www.example.com">Example</a>
+      </p>
+    </footer>
+  </body>
+</html>
